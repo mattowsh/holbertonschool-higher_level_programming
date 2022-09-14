@@ -34,4 +34,4 @@ def roman_to_int(roman_string):
             if roman_string[i] == "M":
                 sum += 1000
         return sum
-    return sum
+    return 0
