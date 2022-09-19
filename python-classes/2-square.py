@@ -9,5 +9,5 @@ class Square:
 
         if isinstance(size, int) == 0:
             raise TypeError("size must be an integer")
-        if size <= 0:
+        if size <= 0 or size is None:
             raise ValueError("size must be >= 0")
