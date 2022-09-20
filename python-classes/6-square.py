@@ -6,13 +6,7 @@ class Square:
     """Class that defines a square with attributes"""
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
-        if type(position) == int and len(position) == 2:
-            if position[0] >= 0 or position[1] >= 0:
-                self.__position = position
-            else:
-                raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = position
 
     @property
     def size(self):
