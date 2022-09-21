@@ -16,5 +16,13 @@ My name is Alberto
 >>> say_my_name("", "Hawking")
 My name is  Hawking
 
->>> say_my_name("", "")
-My name is  
+>>> say_my_name()
+My name is 
+
+>>> say_my_name("Silvestre", 1998)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name(2022, "Piolin")
+Traceback (most recent call last):
+TypeError: first_name must be a string
