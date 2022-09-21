@@ -33,3 +33,12 @@ TypeError: a must be an integer
 add_integer(2, 5aa)
 Traceback (most recent call last):
 TypeError: b must be an integer
+
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+OverFlowError: cannot convert float infinity to integer
+
+>>> add_integer(None)
+
+
+>>> add_integer(4, None)
