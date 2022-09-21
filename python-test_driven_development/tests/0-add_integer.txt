@@ -36,9 +36,4 @@ TypeError: b must be an integer
 
 >>> add_integer(float('inf'))
 Traceback (most recent call last):
-OverFlowError: cannot convert float infinity to integer
-
->>> add_integer(None)
-
-
->>> add_integer(4, None)
+OverflowError: cannot convert float infinity to integer

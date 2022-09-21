@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" Task 0 module """
+
+
 def add_integer(a, b=98):
     """Adds 2 integers and return the result"""
 
