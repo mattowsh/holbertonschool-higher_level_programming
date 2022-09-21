@@ -10,7 +10,7 @@ Try it:
 >>> matrix_divided([[0, -2, 1], [4, -3, 6]], 2)
 [[0.0, -1.0, 0.5], [2.0, -1.5, 3.0]]
 
->>> matrix_divided([0, -2, 1], [4, -3, 6]], 0)
+>>> matrix_divided([[0, -2, 1], [4, -3, 6]], 0)
 Traceback (most recent call last):
 ZeroDivisionError: division by zero
 
