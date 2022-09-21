@@ -1,0 +1,20 @@
+Test module: def say_my_name(first_name, last_name=""):
+------------
+This is an example text file in reStructuredText format.
+------------
+
+First import ``say_my_name`` from the ``3-say_my_name`` module:
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Try it:
+>>> say_my_name("Lynn", "Margulis")
+My name is Lynn Margulis
+
+>>> say_my_name("Alberto")
+My name is Alberto 
+
+>>> say_my_name("", "Hawking")
+My name is  Hawking
+
+>>> say_my_name("", "")
+My name is  
