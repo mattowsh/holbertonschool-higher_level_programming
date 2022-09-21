@@ -23,7 +23,7 @@ Try it:
 Traceback (most recent call last):
 TypeError: b must be an integer
 
->>> add_integer(2string)
+>>> add_integer("2string")
 Traceback (most recent call last):
 TypeError: a must be an integer
 
