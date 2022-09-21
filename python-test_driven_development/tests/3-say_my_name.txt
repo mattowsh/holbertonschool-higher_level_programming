@@ -17,7 +17,8 @@ My name is Alberto
 My name is  Hawking
 
 >>> say_my_name()
-My name is 
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
 >>> say_my_name("Silvestre", 1998)
 Traceback (most recent call last):
