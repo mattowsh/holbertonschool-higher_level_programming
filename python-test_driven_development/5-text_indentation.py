@@ -13,8 +13,8 @@ def text_indentation(text):
         if text[i] is "." or text[i] is "?" or text[i] is ":":
             print(text[i] + "\n")
             find_character = 1
-        elif find_character == 1:
-            if text[i] == " ":
+        if find_character == 1:
+            if text[i + 1] == " ":
                 continue
             find_character = 0
         else:
