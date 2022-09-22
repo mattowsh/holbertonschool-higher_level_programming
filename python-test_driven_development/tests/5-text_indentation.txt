@@ -1,0 +1,25 @@
+Test module: def text_indentation(text):
+------------
+This is an example text file in reStructuredText format.
+------------
+
+First import ``text_indentation`` from the ``5-text_indentation`` module:
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Try it:
+>>> text_indentation("-Is there anybody in there? -Yes! We are: Alice & Boris. =)")
+-Is there anybody in there?
+<BLANKLINE>
+-Yes! We are:
+<BLANKLINE>
+Alice & Boris.
+<BLANKLINE>
+=)
+
+>>> text_indentation(-1.5)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
