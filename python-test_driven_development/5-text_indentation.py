@@ -14,7 +14,8 @@ def text_indentation(text):
             print(text[i] + "\n")
             find_character = 1
         elif find_character == 1:
+            if text[i] == " ":
+                continue
             find_character = 0
-            continue
         else:
             print(text[i], end="")
