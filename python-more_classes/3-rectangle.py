@@ -47,10 +47,10 @@ class Rectangle:
     def __str__(self):
         """Returns the rectangle in string format"""
         result = ""
-        if self.width != 0 or self.heigth != 0:
+        if self.width != 0 or self.height != 0:
             for i in range(self.height):
                 result += "#" * self.width
-                if i != self.width - 1:
+                if i != self.height - 1:
                     result += "\n"
         
         return result
