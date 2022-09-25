@@ -72,7 +72,7 @@ class Rectangle:
         """Compares the area of two differents Rectangle instances"""
         if isinstance(rect_1, Rectangle) == 0:
             raise TypeError("rect_1 must be an instance of Rectangle")
-        if isinstance(rect_1, Rectangle) == 0:
+        if isinstance(rect_2, Rectangle) == 0:
             raise TypeError("rect_2 must be an instance of Rectangle")
 
         if rect_1.area() >= rect_2.area():
