@@ -12,6 +12,7 @@ In this section you can find tasks and projects of Fundations: 2nd trimesters, o
 - Classes and Objects
 - Test-driven development
 - More Classes and Objects
+- Inheritance
 
 <a> <img src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton logo" width=18% heigth=18% ></img></a>
 
