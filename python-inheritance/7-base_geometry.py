@@ -3,6 +3,7 @@
 
 
 class BaseGeometry:
+    """Class that define a BaseGeometry object"""
     pass
 
     def area(self):
