@@ -3,6 +3,7 @@
 
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """Class based on Rectangle baseclass"""
 
