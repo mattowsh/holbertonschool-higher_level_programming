@@ -3,6 +3,7 @@
 Task 9 module
 """
 
+
 class Student():
     """Class Student with attributes"""
 
@@ -15,4 +16,3 @@ class Student():
     def to_json(self):
         """Retrieves a dictionary representation of a Student instance"""
         return self.__dict__
-
