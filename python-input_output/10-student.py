@@ -22,5 +22,5 @@ class Student():
                     if key == item:
                         new_dict[item] = value
             return new_dict
-                    
+
         return self.__dict__
