@@ -93,7 +93,7 @@ class Rectangle(Base):
         result += "{}/{}".format(self.width, self.height)
         return result
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ Assigns an argument to each attribute """
         if len(args) >= 1:
             self.id = args[0]
@@ -105,3 +105,17 @@ class Rectangle(Base):
                 self.__x = args[3]
             if len(args) == 5:
                 self.__y = args[4]
+        else:
+            # Remember: **kwargs must be skipped if *args exists
+            # and is not empty
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.__width = value
+                if key == "height":
+                    self.__height = value
+                if key == "x":
+                    self.__x = value
+                if key == "y":
+                    self.__y = value
