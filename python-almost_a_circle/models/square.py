@@ -16,5 +16,5 @@ class Square(Rectangle):
         """ Overrides the __str__ method so that it returns a
         personalizated message """
         result = "[Square] ({}) ".format(self.id)
-        result += "<x>/<y> - <size>".format(self.x, self.y, self.width)
+        result += "{}/{} - {}".format(self.x, self.y, self.width)
         return result
