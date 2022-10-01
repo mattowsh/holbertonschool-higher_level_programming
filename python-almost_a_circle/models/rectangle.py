@@ -82,3 +82,12 @@ class Rectangle(Base):
             for j in range(self.__width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """ Overrides the __str__ method so that it returns a
+        personalizated message """
+        result = ""
+        result = "[Rectangle] ({}) ".format(self.id)
+        result += "{}/{} - ".format(self.x, self.y)
+        result += "{}/{}".format(self.width, self.height)
+        return result
