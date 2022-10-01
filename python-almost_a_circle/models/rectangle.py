@@ -78,15 +78,16 @@ class Rectangle(Base):
 
     def display(self):
         """ Prints in stdout the Rectangle instance with the character # """
-        for i in range(self.__height):
-            for j in range(self.__width):
-                print("#", end="")
+        for i in range(self.y):
             print()
+
+        for j in range(self.height):
+            print(" " * self.x, end="")
+            print("#" * self.width)
 
     def __str__(self):
         """ Overrides the __str__ method so that it returns a
         personalizated message """
-        result = ""
         result = "[Rectangle] ({}) ".format(self.id)
         result += "{}/{} - ".format(self.x, self.y)
         result += "{}/{}".format(self.width, self.height)
