@@ -3,6 +3,7 @@
 Module that defines the base class for 'Almost a Circle' project
 """
 import json
+from os.path import exists
 
 
 class Base:
@@ -35,7 +36,7 @@ class Base:
             for element in list_objs:
                 result.append(element.to_dictionary())
 
-        with open(filename, 'w', encoding='UTF-8') as file:
+        with open(filename, 'w', encoding='utf-8') as file:
             file.write(cls.to_json_string(result))
 
     @staticmethod
@@ -49,7 +50,8 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """ Returns an instance with all attributes already set """
+        """ Returns an instance with all attributes already set,
+        using the update method to assign all these attributes """
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
         if cls.__name__ == "Square":
@@ -57,3 +59,16 @@ class Base:
 
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """ Returns a list of instances """
+        filename = cls.__name__ + ".json"
+        instances_list = []
+
+        if exists(filename):
+            with open(filename, 'r') as file:
+                jsonstring = cls.from_json_string(file.read())
+                for element in jsonstring:
+                    instances_list.append(cls.create(**element))
+        return instances_list
