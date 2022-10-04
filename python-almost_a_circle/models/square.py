@@ -29,7 +29,7 @@ class Square(Rectangle):
         """ To set the private size attribute: setter """
         self.width = value
         self.height = value
-    
+
     def update(self, *args, **kwargs):
         """ Assigns an argument to each attribute """
         if len(args) >= 1:
