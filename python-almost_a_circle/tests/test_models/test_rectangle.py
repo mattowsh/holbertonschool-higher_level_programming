@@ -63,8 +63,14 @@ class Test_classRectangle(unittest.TestCase):
             Rectangle(1, 2, 3, -4)
 
     def test_area(self):
+        """ check the correct functionality of area method """
         rect = Rectangle(2, 2)
         self.assertEqual(rect.area(), 4)
+
+    def test_correct_str(self):
+        """ check the correct functionality of __str__ method overrides """
+        rect = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(rect.__str__(), '[Rectangle] (5) 3/4 - 1/2')
 
 if __name__ == "__main__":
     unittest.main()
