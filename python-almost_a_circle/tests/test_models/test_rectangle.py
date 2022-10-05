@@ -112,11 +112,11 @@ class Test_classRectangle(unittest.TestCase):
         """ check the correct update of attributes """
         rect = Rectangle(1, 1, 1, 1, 1)
 
-        rect.update(98, 99, 100, 101)
-        self.assertEqual(rect.__str__(), '[Rectangle] (1) 100/101 - 98/99')
+        rect.update(2)
+        self.assertEqual(rect.__str__(), '[Rectangle] (2) 1/1 - 1/1')
 
-        rect.update(id=10)
-        self.assertEqual(rect.__str__(), '[Rectangle] (10) 100/101 - 98/99')
+        rect.update(height=3, width=4, x=5, y=6)
+        self.assertEqual(rect.__str__(), '[Rectangle] (2) 5/6 - 4/3')
 
 
 
