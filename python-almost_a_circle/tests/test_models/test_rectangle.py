@@ -3,6 +3,8 @@
 Unittest for class Rectangle methods
 """
 import unittest
+from io import StringIO
+import sys
 from models.rectangle import Rectangle
 
 
@@ -72,10 +74,36 @@ class Test_classRectangle(unittest.TestCase):
         rect = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual(rect.__str__(), '[Rectangle] (5) 3/4 - 1/2')
 
-    #def test_display_without_xy(self):
+    def test_display_without_xy(self):
         """ check the correct print of the rectangle """
-        #rect = Rectangle(1, 2)
-        #self.assertEqual(rect.display(), '#\n#\n')
+        # without x and y values
+        # creating a temporary output
+        temp = StringIO()
+        # redirect the output to my temporary output
+        sys.stdout = temp
+        
+        rect0 = Rectangle(1, 2)
+        rect0.display()
+        self.assertEqual(temp.getvalue(), "#\n#\n")
+
+        # without y value
+        temp = StringIO()
+        sys.stdout = temp
+
+        rect1 = Rectangle(1, 2, 3)
+        rect1.display()
+        self.assertEqual(temp.getvalue(), "   #\n   #\n")
+
+        # with x and y values
+        temp = StringIO()
+        sys.stdout = temp
+
+        rect2 = Rectangle(2, 2, 2, 1)
+        rect2.display()
+        self.assertEqual(temp.getvalue(), "\n  ##\n  ##\n")
+
+
+
 
 if __name__ == "__main__":
     unittest.main()
