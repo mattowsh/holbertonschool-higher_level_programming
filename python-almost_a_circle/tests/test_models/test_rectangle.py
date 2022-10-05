@@ -108,6 +108,17 @@ class Test_classRectangle(unittest.TestCase):
         result = {'x': 3, 'y': 0, 'id': 8, 'height': 2, 'width': 1}
         self.assertEqual(rect.to_dictionary(), result)
 
+    def test_update(self):
+        """ check the correct update of attributes """
+        rect = Rectangle(1, 1, 1, 1, 1)
+
+        rect.update(98, 99, 100, 101)
+        self.assertEqual(rect.__str__(), '[Rectangle] (1) 100/101 - 98/99')
+
+        rect.update(id=10)
+        self.assertEqual(rect.__str__(), '[Rectangle] (10) 100/101 - 98/99')
+
+
 
 if __name__ == "__main__":
     unittest.main()
