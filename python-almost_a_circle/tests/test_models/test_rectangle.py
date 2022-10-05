@@ -25,13 +25,13 @@ class Test_classRectangle(unittest.TestCase):
         self.assertEqual(rect2.x, 3)
         self.assertEqual(rect2.y, 4)
 
-    def test_width_nonint(self):
+    def test_no_int_args(self):
         """ check if the arguments are not int values """
         with self.assertRaises(TypeError):
             Rectangle("1", 2)
-            Rectangle(1, "2")
-            Rectangle(1, 2, "3")
-            Rectangle(1, 2, 3, "4")
+          #  Rectangle(1, "2")
+           # Rectangle(1, 2, "3")
+          #  Rectangle(1, 2, 3, "4")
 
     def test_id_ok(self):
         """ check to check id of the class, passed as argument """
