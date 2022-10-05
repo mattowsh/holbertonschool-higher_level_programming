@@ -52,7 +52,24 @@ class Test_classBase(unittest.TestCase):
         with self.assertRaises(TypeError):
             Base(2, 4, 5, 8)
 
-        
+    def test_toJSONstring_data(self):
+        """ check method with a non empty list_dict as argument"""
+        list_dict = [{'x':0}, {'x':2}]
+        Base.to_json_string(list_dict)
+        self.assertEqual(Base.to_json_string(list_dict),'[{"x": 0}, {"x": 2}]')
+
+    def test_toJSONstring_none(self):
+        """ check method without any argument """
+        Base.to_json_string(None)
+        self.assertEqual(Base.to_json_string(None), '[]')
+
+    def test_toJSONstring_emptylist(self):
+        """ check method with an empty list as argument """
+        Base.to_json_string([])
+        self.assertEqual(Base.to_json_string([]), '[]')
+
+
+
 
 
 if __name__ == "__main__":
