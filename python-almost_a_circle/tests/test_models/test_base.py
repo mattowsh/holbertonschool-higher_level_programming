@@ -3,7 +3,6 @@
 Unittest for class Base methods
 """
 import unittest
-import json
 from models.base import Base
 
 
@@ -72,10 +71,6 @@ class Test_classBase(unittest.TestCase):
 
         """ check method with a non empty list as argument """
         self.assertEqual(Base.from_json_string('[{ "id": 89 }]'), [{'id': 89}])
-
-
-
-
 
 if __name__ == "__main__":
     unittest.main()
