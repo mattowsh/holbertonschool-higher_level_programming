@@ -20,9 +20,6 @@ class Test_classBase(unittest.TestCase):
         base2 = Base(-10)
         self.assertEqual(base2.id, -10)
 
-        base3 = Base()
-        self.assertEqual(base3.id, 3)
-
         base4 = Base("string")
         self.assertEqual(base4.id, "string")
 
@@ -44,5 +41,5 @@ class Test_classBase(unittest.TestCase):
         
 
 
-    if __name__ == "__main__":
-        unittest.main()
+if __name__ == "__main__":
+    unittest.main()
