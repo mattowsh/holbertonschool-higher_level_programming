@@ -44,5 +44,5 @@ class Test_classBase(unittest.TestCase):
         
 
 
-if __name__ == "__main__":
-    unittest.main()
+    if __name__ == "__main__":
+        unittest.main()
