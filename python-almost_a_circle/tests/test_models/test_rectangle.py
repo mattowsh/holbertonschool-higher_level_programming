@@ -29,9 +29,12 @@ class Test_classRectangle(unittest.TestCase):
         """ check if the arguments are not int values """
         with self.assertRaises(TypeError):
             Rectangle("1", 2)
-          #  Rectangle(1, "2")
-           # Rectangle(1, 2, "3")
-          #  Rectangle(1, 2, 3, "4")
+        with self.assertRaises(TypeError):
+            Rectangle(1, "2")
+        with self.assertRaises(TypeError):
+            Rectangle(1, 2, "3")
+        with self.assertRaises(TypeError):
+            Rectangle(1, 2, 3, "4")
 
     def test_id_ok(self):
         """ check to check id of the class, passed as argument """
