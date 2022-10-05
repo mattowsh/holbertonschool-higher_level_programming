@@ -118,6 +118,10 @@ class Test_classRectangle(unittest.TestCase):
         rect.update(height=3, width=4, x=5, y=6)
         self.assertEqual(rect.__str__(), '[Rectangle] (2) 5/6 - 4/3')
 
+    def test_create_method(self):
+        """ check the correct creation of a new instance """
+        Rectangle.create(**{ 'id': 89 })
+        self.assertEqual(Rectangle.id, 89)
 
 
 if __name__ == "__main__":
