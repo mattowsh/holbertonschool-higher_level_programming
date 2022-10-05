@@ -105,8 +105,8 @@ class Test_classRectangle(unittest.TestCase):
     def test_to_dictionary(self):
         """ check the correct return of the to_dictionary method """
         rect = Rectangle(1, 2, 3, 0, 8)
-        self.assertEqual(rect.to_dictionary(), '{"x": 3, "y": 0, "id": 8,
-                "height": 1, "width": 2}')
+        result = {'x': 3, 'y': 0, 'id': 8, 'height': 2, 'width': 1}
+        self.assertEqual(rect.to_dictionary(), result)
 
 
 if __name__ == "__main__":
