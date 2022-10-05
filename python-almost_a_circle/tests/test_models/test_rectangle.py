@@ -37,6 +37,30 @@ class Test_classRectangle(unittest.TestCase):
             Rectangle(1, 2, 3, "4")
 
     def test_id_ok(self):
-        """ check to check id of the class, passed as argument """
+        """ check the id of the class, passed as argument """
         rect = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual(rect.id, 5)
+
+    def test_negative_heigh_and_width(self):
+        """ check if height and width are a negative int """
+        with self.assertRaises(ValueError):
+            Rectangle(-1, 2)
+        with self.assertRaises(ValueError):
+            Rectangle(1, -2)
+
+    def test_zero_height_and_width(self):
+        """ check if height and width are zero """
+        with self.assertRaises(ValueError):
+            Rectangle(0, 2)
+        with self.assertRaises(ValueError):
+            Rectangle(1, 0)
+
+    def test_negative_x_and_y(self):
+        """ check if x and y are a negative int """
+        with self.assertRaises(ValueError):
+            Rectangle(1, 2, -3)
+        with self.assertRaises(ValueError):
+            Rectangle(1, 2, 3, -4)
+
+if __name__ == "__main__":
+    unittest.main()
