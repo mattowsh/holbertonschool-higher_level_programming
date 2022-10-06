@@ -57,3 +57,34 @@ class Test_classSquare(unittest.TestCase):
         """ check if size is a positive int value """
         with self.assertRaises(ValueError):
             Square(0)
+
+    def test_correct_str(self):
+        """ check the correct functionality of __str__ method overrides """
+        sq = Square(1, 2, 3, 4)
+        self.assertEqual(sq.__str__(), '[Square] (4) 2/3 - 1')
+
+    def test_to_dictionary(self):
+        """ check the correct return of the to_dictionary method """
+        sq4 = Square(1, 2, 3, 4)
+        result = {'id': 4, 'size': 1, 'x': 2, 'y': 3}
+        self.assertEqual(sq4.to_dictionary(), result)
+
+    def test_update(self):
+        """ check the correct update of attributes """
+        sq5 = Square(1, 1, 1, 1)
+
+        sq5.update(2)
+        self.assertEqual(sq5.__str__(), '[Square] (2) 1/1 - 1')
+
+        sq5.update(size=9, x=5, y=6)
+        self.assertEqual(sq5.__str__(), '[Square] (2) 5/6 - 9')
+
+
+
+
+
+
+
+
+
+
