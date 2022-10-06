@@ -43,3 +43,12 @@ class Test_classSquare(unittest.TestCase):
             Square(1, "2")
         with self.assertRaises(TypeError):
             Square(1, 2, "3")
+
+    def test_negative_size_x_y(self):
+        """ check if size, x and y are a negative int """
+        with self.assertRaises(ValueError):
+            Square(-1, 2)
+        with self.assertRaises(ValueError):
+            Square(1, -2)
+        with self.assertRaises(ValueError):
+            Square(1, 2, -3)
