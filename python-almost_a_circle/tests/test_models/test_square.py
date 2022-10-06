@@ -42,4 +42,4 @@ class Test_classSquare(unittest.TestCase):
         with self.assertRaises(TypeError):
             Square(1, "2")
         with self.assertRaises(TypeError):
-            Squa(1, 2, "3")
+            Square(1, 2, "3")
