@@ -79,12 +79,16 @@ class Test_classSquare(unittest.TestCase):
         sq5.update(size=9, x=5, y=6)
         self.assertEqual(sq5.__str__(), '[Square] (2) 5/6 - 9')
 
+    def test_create_method(self):
+        """ check the correct creation of a new instance """
+        sq6 = Square.create(**{ 'id': 89 })
+        self.assertEqual(sq6.id, 89)
 
+        sq7 = Square.create(**{'size': 2,, 'x': 3, 'y': 4, 'id': 43})
+        self.assertEqual(sq7.id, 43)
+        self.assertEqual(sq7.size, 2)
+        self.assertEqual(sq7.x, 3)
+        self.assertEqual(sq7.y, 4)
 
-
-
-
-
-
-
-
+if __name__ == "__main__":
+    unittest.main()
