@@ -130,6 +130,10 @@ class Test_classRectangle(unittest.TestCase):
         self.assertEqual(rect1.x, 3)
         self.assertEqual(rect1.y, 4)
 
+    def test_save_to_file(self):
+        """ check the correct functionality of the save_to_file method """
+
+
 
 if __name__ == "__main__":
     unittest.main()
