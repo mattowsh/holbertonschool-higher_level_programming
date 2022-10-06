@@ -52,3 +52,8 @@ class Test_classSquare(unittest.TestCase):
             Square(1, -2)
         with self.assertRaises(ValueError):
             Square(1, 2, -3)
+
+    def test_positive_size(self):
+        """ check if size is a positive int value """
+        with self.assertRaises(ValueError):
+            Square(0)
