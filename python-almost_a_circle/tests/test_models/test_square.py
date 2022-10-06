@@ -84,8 +84,7 @@ class Test_classSquare(unittest.TestCase):
         sq6 = Square.create(**{ 'id': 89 })
         self.assertEqual(sq6.id, 89)
 
-        sq7 = Square.create(**{'size': 2,, 'x': 3, 'y': 4, 'id': 43})
-        self.assertEqual(sq7.id, 43)
+        sq7 = Square.create(**{'size': 2,, 'x': 3, 'y': 4})
         self.assertEqual(sq7.size, 2)
         self.assertEqual(sq7.x, 3)
         self.assertEqual(sq7.y, 4)
