@@ -15,6 +15,8 @@ In this section you can find tasks and projects of Fundations: 2nd trimesters, o
 - Inheritance
 - Input/Output
 - Pre-AirBnB project
+- SQL introduction
+- SQL more queries
 
 <a> <img src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton logo" width=18% heigth=18% ></img></a>
 
