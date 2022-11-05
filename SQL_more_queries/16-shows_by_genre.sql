@@ -5,9 +5,9 @@
 
 SELECT sh.title, ge.name
 FROM
-    tv_shows sh INNER JOIN tv_show_genres sh_ge
+    tv_shows sh LEFT JOIN tv_show_genres sh_ge
 ON
-    sh.id = sh_ge.show_id INNER JOIN tv_genres ge
+    sh.id = sh_ge.show_id LEFT JOIN tv_genres ge
 ON
     ge.id = sh_ge.genre_id
 ORDER BY
