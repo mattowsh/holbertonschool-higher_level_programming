@@ -7,6 +7,5 @@ FROM tv_shows sh
 -- In this case we want return all elements of the A table (sh), no matter
 -- if has or not a value in the B table (genre):
 LEFT JOIN tv_show_genres genre
-ON
-    sh.id = genre.show_id
+ON sh.id = genre.show_id
 ORDER BY sh.title, genre.genre_id ASC;
