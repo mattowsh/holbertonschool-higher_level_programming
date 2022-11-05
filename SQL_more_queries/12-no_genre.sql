@@ -6,7 +6,7 @@ SELECT sh.title, genres.genre_id
 FROM tv_shows sh
 -- We want the records with NULL genre_id:
 LEFT JOIN tv_show_genres genres
-ON sh.id = genres.genre_id
+ON sh.id = genres.show_id
 WHERE
-    genres.genre_id IS NULL
+    genres.show_id IS NULL
 ORDER BY sh.title, genres.genre_id ASC;
