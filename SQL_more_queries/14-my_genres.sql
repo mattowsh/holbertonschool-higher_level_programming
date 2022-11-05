@@ -6,8 +6,10 @@ SELECT ge.name AS name
 FROM 
     tv_genres ge INNER JOIN tv_show_genres sh_ge
 ON 
-    ge.id = sh_ge.genre_id
+    ge.id = sh_ge.genre_id INNER JOIN tv_shows sh
+ON
+    sh.id = sh_ge.show_id
 WHERE
-    sh_ge.show_id = 8 -- according to tv_shows table: show id 8 = Dexter
+    sh.title = "Dexter"
 ORDER BY
     ge.name ASC;
