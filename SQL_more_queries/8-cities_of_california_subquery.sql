@@ -3,7 +3,7 @@
 -- database hbtn_0d_usa
 
 SELECT cities.id, cities.name 
-FROM cities states
+FROM cities, states
 WHERE
     states.name = "California" AND
     cities.state_id = states.id
