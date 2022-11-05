@@ -9,3 +9,5 @@ ON
     ge.id = sh_ge.genre_id
 WHERE
     sh_ge.show_id = 8 -- according to tv_shows table: show id 8 = Dexter
+ORDER BY
+    ge.name ASC;
