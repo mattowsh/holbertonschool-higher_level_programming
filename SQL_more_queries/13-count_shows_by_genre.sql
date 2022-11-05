@@ -9,4 +9,5 @@ FROM tv_genres ge
 INNER JOIN tv_show_genres sh_ge
 ON ge.id = sh_ge.genre_id
 
+GROUP BY ge.name
 ORDER BY COUNT(sh_ge.genre_id) DESC;
