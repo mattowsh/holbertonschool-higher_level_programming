@@ -3,7 +3,8 @@
 -- 2. lists all genres from hbtn_0d_tvshows and displays the number of
 -- shows linked to each
 
-SELECT ge.name, COUNT(sh_ge.genre_id)
+-- We use AS like titles of our table ;)
+SELECT ge.name AS genre, COUNT(sh_ge.genre_id) AS number_of_shows
 FROM tv_genres ge
 
 INNER JOIN tv_show_genres sh_ge
