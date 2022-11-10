@@ -11,7 +11,6 @@ In this section you can find tasks and projects of Fundations: 2nd trimesters, o
 - How to retrieve datas from multiple tables in one request
 - What are subqueries
 - What are JOIN and UNION
-- folder new name test
 
 <a> <img src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton logo" width=18% heigth=18% ></img></a>
 
