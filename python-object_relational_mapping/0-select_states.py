@@ -14,10 +14,10 @@ if __name__ == "__main__":
     # to connect my target db: establish the connector:
     my_db = MySQLdb.connect(
         host="localhost",
-        port="3306",
+        port=3306,
         user=mysql_username,
         pwd=mysql_pwd,
-        # db I want to connect to: 
+        # db I want to connect to:
         db=mysql_dbname)
 
     # to execute the query of interest --> my SQL request:
@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     sql_request = "SELECT * FROM states ORDER BY id ASC"
     qry_cursor.execute(sql_request)
-    
+
     # fetchall statement selects all data from the state table:
     records = sql_request.fetchall()
 
