@@ -27,7 +27,7 @@ if __name__ == "__main__":
     qry_cursor.execute(sql_request)
 
     # fetchall statement selects all data from the state table:
-    records = sql_request.fetchall()
+    records = qry_cursor.fetchall()
 
     # print all records:
     for element in records:
