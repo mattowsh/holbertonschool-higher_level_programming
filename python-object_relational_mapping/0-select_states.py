@@ -16,7 +16,7 @@ if __name__ == "__main__":
         host="localhost",
         port=3306,
         user=mysql_username,
-        pwd=mysql_pwd,
+        password=mysql_pwd,
         # db I want to connect to:
         db=mysql_dbname)
 
