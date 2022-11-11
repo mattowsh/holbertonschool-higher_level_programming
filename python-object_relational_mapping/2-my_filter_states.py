@@ -21,8 +21,7 @@ if __name__ == "__main__":
         db=mysql_dbname)
 
     qry_cursor = my_db.cursor()
-    sql_request = "SELECT * FROM states WHERE state LIKE {} ORDER BY id ASC".format
-    (mysql_tomatch)
+    sql_request = "SELECT * FROM states WHERE name LIKE '{}' ORDER BY id ASC".format(mysql_tomatch)
     qry_cursor.execute(sql_request)
     records = qry_cursor.fetchall()
 
