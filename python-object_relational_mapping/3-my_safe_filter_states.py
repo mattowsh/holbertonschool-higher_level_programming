@@ -24,7 +24,7 @@ if __name__ == "__main__":
     qry_cursor.execute("""SELECT *
                         FROM states
                         WHERE name LIKE %s
-                        ORDER BY id ASC""", mysql_tomatch)
+                        ORDER BY id ASC""", (mysql_tomatch,))
     records = qry_cursor.fetchall()
 
     for element in records:
