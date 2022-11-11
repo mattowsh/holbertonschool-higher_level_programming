@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Task 1: lists all states with a name starting with N from the database
-hbtn_0e_0_usa
+Task 3: takes in an argument and displays all values in the states table of
+hbtn_0e_0_usa where name matches the argument but safe from MySQL injections!
 """
 
 if __name__ == "__main__":
@@ -11,17 +11,18 @@ if __name__ == "__main__":
     mysql_username = sys.argv[1]
     mysql_pwd = sys.argv[2]
     mysql_dbname = sys.argv[3]
+    mysql_tomatch = sys.argv[4]
 
     my_db = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=mysql_username
-        password=mysql_pwd
+        user=mysql_username,
+        password=mysql_pwd,
         db=mysql_dbname)
 
     qry_cursor = my_db.cursor()
-    sql_request = """SELEC * FROM states WHERE state LIKE BINARY 'N%' ORDER BY
-        id ASC"""
+    sql_request = """SELECT * FROM states WHERE name LIKE = %s ORDER BY
+        id ASC""", mysql_tomatch
     qry_cursor.execute(sql_request)
     records = qry_cursor.fetchall()
 
@@ -29,4 +30,3 @@ if __name__ == "__main__":
         print(element)
 
     my_db.close()
-    
