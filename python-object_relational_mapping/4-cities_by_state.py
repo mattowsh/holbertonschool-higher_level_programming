@@ -19,9 +19,9 @@ if __name__ == "__main__":
         db=mysql_dbname)
 
     qry_cursor = my_db.cursor()
-    qry_cursor.execute("""SELECT cities.id cities.name states.name
-                        FROM cities c states s
-                        WHERE c.state_id = s.id
+    qry_cursor.execute("""SELECT c.id c.name s.name
+                        FROM cities c LEFT JOIN states s
+                        ON c.state_id = s.id
                         ORDER BY c.id ASC""")
     records = qry_cursor.fetchall()
 
