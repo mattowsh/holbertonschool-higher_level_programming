@@ -19,9 +19,10 @@ if __name__ == "__main__":
         db=mysql_dbname)
 
     qry_cursor = my_db.cursor()
-    qry_cursor.execute("""SELECT *
-                        FROM cities
-                        ORDER BY id ASC""")
+    qry_cursor.execute("""SELECT cities.id cities.name states.name
+                        FROM cities c states s
+                        WHERE c.state_id = s.id
+                        ORDER BY c.id ASC""")
     records = qry_cursor.fetchall()
 
     for element in records:
