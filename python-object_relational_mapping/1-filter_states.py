@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" Task 1: lists all states with a name starting with N from the database hbtn_0e_0_usa
+""" Task 1: lists all states with a name starting with N from the database
+    hbtn_0e_0_usa
 """
 
 if __name__ == "__main__":
@@ -26,4 +27,3 @@ if __name__ == "__main__":
         print(element)
 
     my_db.close()
-    
