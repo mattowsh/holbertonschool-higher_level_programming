@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Task 0: lists all states from the database hbtn_0e_0_usa
+Task 2: takes in an argument and displays all values in the states table of
+hbtn_0e_0_usa where name matches the argument
 """
 
 if __name__ == "__main__":
@@ -21,7 +22,7 @@ if __name__ == "__main__":
 
     qry_cursor = my_db.cursor()
     sql_request = "SELECT * FROM states WHERE state LIKE {} ORDER BY id ASC".format
-        (mysql_tomatch)
+    (mysql_tomatch)
     qry_cursor.execute(sql_request)
     records = qry_cursor.fetchall()
 
