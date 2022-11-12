@@ -24,14 +24,14 @@ if __name__ == "__main__":
     qry_cursor.execute("""SELECT c.name
                         FROM cities c LEFT JOIN states s
                         ON c.state_id = s.id
-                        WHERE c.name LIKE BINARY '{}'
+                        WHERE s.name LIKE BINARY '{}'
                         ORDER BY c.id ASC""".format(mysql_tomatch))
     records = qry_cursor.fetchall()
 
-    for i in range(len(records) - 1):
+    for i, element in enumerate(records):
         if i != 0:
-            print(",", end=" ")
-        print(records[i], "")
+            print(", ", end="")
+        print(element[0], end="")
     print()
 
     my_db.close()
