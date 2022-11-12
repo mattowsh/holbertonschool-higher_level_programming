@@ -14,6 +14,7 @@ if __name__ == "__main__":
     class State(Base):
         """ New class to generate a table """
 
+
         __tablename__ = "states"
         # Defines new class attributes:
         id = Column(Integer, autoincrement=True, unique=True,
