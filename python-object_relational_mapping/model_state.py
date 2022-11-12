@@ -10,10 +10,9 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
-    
+
 class State(Base):
     """ New class to generate a table """
-
 
     __tablename__ = "states"
     # Defines new class attributes:
