@@ -19,7 +19,10 @@ if __name__ == "__main__":
         db=mysql_dbname)
 
     qry_cursor = my_db.cursor()
-    sql_request = """SELEC * FROM states WHERE state LIKE BINARY 'N%' ORDER BY id ASC"""
+    sql_request = """SELECT *
+                    FROM states
+                    WHERE name LIKE BINARY 'N%'
+                    ORDER BY states.id ASC"""
     qry_cursor.execute(sql_request)
     records = qry_cursor.fetchall()
 
