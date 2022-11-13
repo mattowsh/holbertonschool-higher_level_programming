@@ -27,7 +27,7 @@ if __name__ == "__main__":
 
     result = session.query(State).filter(
         State.id == 2).update({"name": "New Mexico"},
-        synchronize_session='fetch')
+                                synchronize_session='fetch')
     session.commit()
     # Also, I would take the object with id == 2 and update his name attribute:
     # ej. filter State.id.like(2) and result.name = "New Mexico"
