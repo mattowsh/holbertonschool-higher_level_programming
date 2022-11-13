@@ -22,28 +22,28 @@ if __name__ == "__main__":
                             mysql_username, mysql_password, mysql_dbname))
     Base.metadata.create_all(bind=engine)
 
-    # Create the new object = new record:
-    state_LA = State(name="Louisiana")
-
-    # Create the new session like always:
     Session = sessionmaker(bind=engine)
     session = Session()
 
+    # Create the new object = new record:
+    new_state = State()
+    new_state.name = "Louisiana"
+
     # Adding objects to the session doesn't actually writes them to the
     # database, it only prepares the objects to be saved in the next commit:
-    session.add(state_LA)
+    session.add(new_state)
 
     # Now yes, we will finally add the new object.
     # add_all() method accepts a list of objects to be added to the session:
-    session.add_all([state_LA])
+    session.add_all([new_state])
 
     # Save the objects to the database call commit() method:
     session.commit()
 
     # Makes the request and print the records :)
-    results = session.query(State).all()
+    result = session.query(State).filter(
+        State.name == new_state.name).first()
 
-    for element in results:
-        print("{}: {}".format(element.id, element.name))
+    print(result.id)
 
     session.close()
