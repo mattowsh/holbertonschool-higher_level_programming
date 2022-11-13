@@ -27,6 +27,9 @@ if __name__ == "__main__":
     session = Session()
     result = session.query(State).first()
 
-    print("{}: {}".format(result.id, result.name))
+    if len(result) != 0:
+        print("{}: {}".format(result.id, result.name))
+    else:
+        print("Nothing")
 
     session.close()
