@@ -1,4 +1,4 @@
- #!/usr/bin/python3
+#!/usr/bin/python3
 """
 Task 7: script that lists all State objects from the database hbtn_0e_6_usa.
 You must use the module SQLAlchemy
@@ -8,8 +8,8 @@ import sys
 import MySQLdb
 from model_state import Base, State
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import create_engine, sessionmaker
-
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
 
