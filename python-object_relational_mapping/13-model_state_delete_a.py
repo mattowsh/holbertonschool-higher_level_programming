@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Task 12: changes the name of a State object from the database hbtn_0e_6_usa.
-You must use the module SQLAlchemy
+Task 13: deletes all State objects with a name containing the letter a from
+the database hbtn_0e_6_usa. You must use the module SQLAlchemy
 """
 
 import sys
@@ -26,10 +26,7 @@ if __name__ == "__main__":
     session = Session()
 
     result = session.query(State).filter(
-        State.id == 2).update({"name": "New Mexico"},
-                                synchronize_session='fetch')
+        State.name.ilike("%a%")).delete(synchronize_session='fetch')
     session.commit()
-    # Also, I would take the object with id == 2 and update his name attribute:
-    # ej. filter State.id.like(2) and result.name = "New Mexico"
-
+ 
     session.close()
