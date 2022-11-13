@@ -23,7 +23,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(bind=engine)
 
     # Create the new object = new record:
-    state_LA = State(id = 6, name = "Louisiana")
+    state_LA = State(name="Louisiana")
 
     # Create the new session like always:
     Session = sessionmaker(bind=engine)
