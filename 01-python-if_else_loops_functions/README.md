@@ -18,6 +18,8 @@
 - What’s a traceback
 - What are the arithmetic operators and how to use them
 
+<hr>
+<br>
 <a> <img src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton logo" width=18% heigth=18% ></img></a>
 
-Montevideo, Uruguay 2022
+Montevideo, Uruguay

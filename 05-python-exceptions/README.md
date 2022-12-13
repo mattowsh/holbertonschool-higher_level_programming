@@ -10,6 +10,8 @@
 - How to raise a builtin exception
 - When do we need to implement a clean-up action after an exception 
 
-<a> <img src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton logo" width=18% heigth=18% style="display: block; margin: 0 auto"></img></a>
+<hr>
+<br>
+<a> <img src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton logo" width=18% heigth=18% ></img></a>
 
-<p align=center>Montevideo, Uruguay.</p>
+Montevideo, Uruguay

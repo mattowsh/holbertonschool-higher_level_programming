@@ -26,6 +26,8 @@ In this section you can find tasks and projects of Fundations: 2nd and 3rd trime
 - Warm Up
 - Objects, Scopes and Closures
 
-<a> <img src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton logo" width=18% heigth=18% style="display: block; margin: 0 auto"></img></a>
+<hr>
+<br>
+<a> <img src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton logo" width=18% heigth=18% ></img></a>
 
-<p align=center>Montevideo, Uruguay.</p>
+Montevideo, Uruguay

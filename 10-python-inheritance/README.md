@@ -14,6 +14,8 @@
 - What is the purpose of inheritance
 - What are, when and how to use isinstance, issubclass, type and super built-in functions
 
-<a> <img src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton logo" width=18% heigth=18% style="display: block; margin: 0 auto"></img></a>
+<hr>
+<br>
+<a> <img src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton logo" width=18% heigth=18% ></img></a>
 
-<p align=center>Montevideo, Uruguay.</p>
+Montevideo, Uruguay
