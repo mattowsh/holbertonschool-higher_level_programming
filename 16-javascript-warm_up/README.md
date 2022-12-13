@@ -1,4 +1,4 @@
-# <a  href="https://www.python.org/"> <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png" alt="JS Language" width=5%></img></a> JavaScript - Warm up
+# <a  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"> <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png" alt="JS Language" width=5%></img></a> JavaScript - Warm up
 
 ## Learning Objectives
 - pending for avaible project page
