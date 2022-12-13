@@ -19,8 +19,10 @@ In this section you can find tasks and projects of Fundations: 2nd and 3rd trime
 - SQL more queries
 - Object-relational mapping
 
+
 # <a  href="https://www.python.org/"> <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png" alt="JS Language" width=5%></img></a> JavaScript - Objects, Scopes and Closures
 
+## Curriculum
 - Warm Up
 - Objects, Scopes and Closures
 
