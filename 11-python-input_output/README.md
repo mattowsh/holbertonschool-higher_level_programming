@@ -15,6 +15,6 @@
 - How to convert a Python data structure to a JSON string
 - How to convert a JSON string to a Python data structure
 
-<a> <img src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton logo" width=18% heigth=18% ></img></a>
+<a> <img src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton logo" width=18% heigth=18% style="display: block; margin: 0 auto"></img></a>
 
-Montevideo, Uruguay 2022
+<p align=center>Montevideo, Uruguay.</p>

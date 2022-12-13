@@ -12,6 +12,6 @@
 - What are indexing and slicing in Python
 - What is the official Python coding style and how to check your code with pycodestyle
 
-<a> <img src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton logo" width=18% heigth=18% ></img></a>
+<a> <img src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton logo" width=18% heigth=18% style="display: block; margin: 0 auto"></img></a>
 
-Montevideo, Uruguay 2022
+<p align=center>Montevideo, Uruguay.</p>
