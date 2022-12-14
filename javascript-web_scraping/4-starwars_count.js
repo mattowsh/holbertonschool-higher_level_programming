@@ -3,18 +3,19 @@
 
 const url = process.argv[2];
 const request = require('request');
-const characterURL = 'https://swapi-api.hbtn.io/api/people/18/';
 
 request(url, (error, response, body) => {
-  if (error && response.statusCode != 0) {
+  if (error) {
     console.log(error);
   }
   const data = JSON.parse(body);
   let counter = 0;
   data.results.forEach(film => {
-    if (film.characters.includes(characterURL)) {
-      counter++;
-    }
+    film.characters.forEach(pj => {
+      if (pj.endsWith('/18/')) {
+        counter++;
+      }
+    });
   });
   console.log(counter);
 });
