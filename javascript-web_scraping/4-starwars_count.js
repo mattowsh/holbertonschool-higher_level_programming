@@ -6,7 +6,7 @@ const request = require('request');
 const characterURL = 'https://swapi-api.hbtn.io/api/people/18/';
 
 request(url, (error, response, body) => {
-  if (error) {
+  if (error && response.statusCode != 0) {
     console.log(error);
   }
   const data = JSON.parse(body);
